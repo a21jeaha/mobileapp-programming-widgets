@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Widgets</string>
     <string name="Button">This is a button</string>
+    <string name="write_somthing_here">Write somthing here..</string>
 </resources>
