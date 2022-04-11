@@ -35,17 +35,28 @@ Det skapdes sedan en TextView som placerades innanför LinearLayouten, I denna r
 Brädden för fönstret sattses efter dess förälder men med en generel magrin på 10dp för att ge den blå bakgrunden chansen att träda fram och sist ändrades bakgrundsfärgen till vit. 
 ```
 <TextView
-                android:id="@+id/text_window"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:background="@color/white"
-                android:layout_margin="10dp"
-                android:text="@string/write_somthing_here"
-                android:textSize="20sp"
-                android:textStyle="italic"
-                android:gravity="center"
-                />
+         android:id="@+id/text_window"
+         android:layout_width="match_parent"
+         android:layout_height="200dp"
+         android:background="@color/white"
+         android:layout_margin="10dp"
+         android:text="@string/write_somthing_here"
+         android:textSize="20sp"
+         android:textStyle="italic"
+         android:gravity="center"
+         />
 ```
+En ImageView skapades sedan där en bild som placerats i mappen **drawable** användes, den 
+```
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_gravity="center"
+        android:src="@drawable/helloworld"
+        />
+```
+
 _Du kan ta bort all text som finns sedan tidigare_.
 
 ## Följande grundsyn gäller dugga-svar:
@@ -73,6 +84,7 @@ function errorCallback(error) {
     }
 }
 ```
+
 
 Bilder läggs i samma mapp som markdown-filen.
 
