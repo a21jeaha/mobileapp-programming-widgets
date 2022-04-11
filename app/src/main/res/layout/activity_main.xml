@@ -17,6 +17,7 @@
 
 
         <LinearLayout
+            android:orientation="vertical"
             android:id="@+id/widget_window_Background"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -32,18 +33,25 @@
             <TextView
                 android:id="@+id/text_window"
                 android:layout_width="match_parent"
-                android:layout_height="350dp"
-                android:background="@color/white"
+                android:layout_height="200dp"
                 android:layout_margin="10dp"
-                android:text="@string/write_somthing_here"
-                android:textSize="20dp"
-                android:textStyle="italic"
+                android:background="@color/white"
                 android:gravity="center"
-                />
+                android:text="@string/write_somthing_here"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/helloworld" />
 
         </LinearLayout>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

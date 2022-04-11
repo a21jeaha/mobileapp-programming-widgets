@@ -31,17 +31,17 @@ I constraint layouten som skapades innan skapas en LinearLayout med den blå fä
   </LinearLayout>
  
 ```
-Det skapdes sedan en TextView som placerades innanför LinearLayouten, I denna ruta skrev en liten kort textsträng som centrerades med hjälp av `android:gravity="center"` samt justerades texten med hjälp av `android:textSize="" android:textStyle=""`.
+Det skapdes sedan en TextView som placerades innanför LinearLayouten, I denna ruta skrev en liten kort textsträng som centrerades med hjälp av `android:gravity="center"` texten justerades sedan med hjälp av `android:textSize="" android:textStyle=""`.
 Brädden för fönstret sattses efter dess förälder men med en generel magrin på 10dp för att ge den blå bakgrunden chansen att träda fram och sist ändrades bakgrundsfärgen till vit. 
 ```
 <TextView
                 android:id="@+id/text_window"
                 android:layout_width="match_parent"
-                android:layout_height="350dp"
+                android:layout_height="200dp"
                 android:background="@color/white"
                 android:layout_margin="10dp"
                 android:text="@string/write_somthing_here"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 android:textStyle="italic"
                 android:gravity="center"
                 />
