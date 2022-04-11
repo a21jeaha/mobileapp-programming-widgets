@@ -1,7 +1,33 @@
 
 # Rapport
 
-**Skriv din rapport här!**
+**Widget Labb**
+
+En constraint layout som har en vit färg, den kommer agera som grund för resten av applikationen. Därför sätts des constraints längst med kanterna av applikationen. 
+```
+<androidx.constraintlayout.widget.ConstraintLayout>
+
+```
+
+En ny färg resource i colors.xml skapades, och kommer användas sedan.
+
+```
+<color name="veryLightBlue">#5F74FC</color>
+```
+I constraint layouten som skapades innan skapas en imageview med den blå färgen, denna kommer senare att innehålla resterande widgets. En generel margin angavs för att förminska storleken av den blå widgeten.
+```
+ <ImageView
+            android:id="@+id/widget_window_Background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="@color/veryLightBlue"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+```
 
 _Du kan ta bort all text som finns sedan tidigare_.
 
