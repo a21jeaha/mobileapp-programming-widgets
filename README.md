@@ -46,16 +46,44 @@ Brädden för fönstret sattses efter dess förälder men med en generel magrin 
          android:gravity="center"
          />
 ```
-En ImageView skapades sedan där en bild som placerats i mappen **drawable** användes, den 
+Ytterligare en LinearLayout skappades denna gång med en horisontel orientering, i den inforgades det en ImageView där en bild som placerats i mappen **drawable** användes samt en textView med en kort text sträng som plaserades bredvid med en centrering. 
 ```
-    <ImageView
-        android:id="@+id/image"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
-        android:layout_gravity="center"
-        android:src="@drawable/helloworld"
-        />
+   <LinearLayout
+                android:layout_marginTop="50dp"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/helloworld"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/a_bit_of_text"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    />
+
+                </LinearLayout>
 ```
+Den widget som implementerades sist var en knapp, som placerades centrerat, knappen infogades som sista element i det första LinearLayouten som skapades. 
+```
+                <Button
+                    android:id="@+id/button"
+                    android:text="@string/Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:layout_gravity="center_horizontal"
+                />
+```
+![](Screenshot.png)
 
 _Du kan ta bort all text som finns sedan tidigare_.
 

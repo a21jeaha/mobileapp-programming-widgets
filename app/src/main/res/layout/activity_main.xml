@@ -53,7 +53,6 @@
                     android:layout_width="150dp"
                     android:layout_height="150dp"
                     android:src="@drawable/helloworld"
-
                     />
 
                 <TextView
@@ -67,8 +66,17 @@
 
             </LinearLayout>
 
+            <Button
+                android:id="@+id/button"
+                android:text="@string/Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:layout_gravity="center_horizontal"
 
-        </LinearLayout>
+                />
+
+            </LinearLayout>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
