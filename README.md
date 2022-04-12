@@ -6,6 +6,7 @@
 En constraint layout som har en vit färg, den kommer agera som grund för resten av applikationen. Därför sätts des constraints längst med kanterna av applikationen. 
 ```
 <androidx.constraintlayout.widget.ConstraintLayout>
+//skapar en constraintlayout
 
 ```
 
@@ -14,20 +15,23 @@ Nya färg resources i colors.xml skapades, och kommer användas sedan.
 ```
 <color name="veryLightBlue">#5F74FC</color>
 <color name="white">#FFFFFF</color>
+//varje rad är en ny lagrad färg med ett namn 
 ```
 I constraint layouten som skapades innan skapas en LinearLayout med den blå färgen, denna kommer senare att innehålla resterande widgets. En generel margin angavs för att förminska storleken av den blå widgeten.
 ```
  <LinearLayout
-            android:id="@+id/widget_window_Background"
+            android:id="@+id/widget_window_Background"    // ger layouten ett ID
+            
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp"
-            android:background="@color/veryLightBlue"
+            android:layout_height="match_parent"          // gör så att layouten anpassar sig utifrån dess förälder 
+            
+            android:layout_margin="10dp"                   // alla kanter flyttas in 10dp
+            android:background="@color/veryLightBlue"      // färgen som skapades innan används som bakgrund
 
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintBottom_toBottomOf="parent"     //
+            app:layout_constraintEnd_toEndOf="parent"           // sätter gränsen för innehållet 
+            app:layout_constraintStart_toStartOf="parent"       //
+            app:layout_constraintTop_toTopOf="parent">          //
   </LinearLayout>
  
 ```
@@ -37,28 +41,28 @@ Brädden för fönstret sattses efter dess förälder men med en generel magrin 
 <TextView
          android:id="@+id/text_window"
          android:layout_width="match_parent"
-         android:layout_height="200dp"
-         android:background="@color/white"
-         android:layout_margin="10dp"
-         android:text="@string/write_somthing_here"
-         android:textSize="20sp"
-         android:textStyle="italic"
-         android:gravity="center"
+         android:layout_height="200dp"              // en fast storlek sätts
+         android:background="@color/white"          
+         android:layout_margin="10dp"               
+         android:text="@string/write_somthing_here" // en sträng variabel hämtas och används
+         android:textSize="20sp"                    // text storleken sätts till 20sp
+         android:textStyle="italic"                 // textens font sätts till italic
+         android:gravity="center"                   // texten centreras
          />
 ```
 Ytterligare en LinearLayout skappades denna gång med en horisontel orientering, i den inforgades det en ImageView där en bild som placerats i mappen **drawable** användes samt en textView med en kort text sträng som plaserades bredvid med en centrering. 
 ```
    <LinearLayout
-                android:layout_marginTop="50dp"
-                android:orientation="horizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_marginTop="50dp"         // layouten flyttas ned 50dp från den widget som ligger över den 
+                android:orientation="horizontal"        // layouten byter till en horisontel orientering
+                android:layout_width="wrap_content"     //
+                android:layout_height="wrap_content">   // layouten använder enbart den plats den behöver och anpassar storleken till det.
 
                 <ImageView
                     android:id="@+id/image"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
-                    android:src="@drawable/helloworld"
+                    android:src="@drawable/helloworld"   // en bild som placerats i mappen `drawable` används
                     />
 
                 <TextView
@@ -67,7 +71,7 @@ Ytterligare en LinearLayout skappades denna gång med en horisontel orientering,
                     android:text="@string/a_bit_of_text"
                     android:textSize="25sp"
                     android:textStyle="bold"
-                    android:layout_gravity="center"
+                    android:layout_gravity="center"       // centrerar inehållet 
                     />
 
                 </LinearLayout>
@@ -85,41 +89,3 @@ Den widget som implementerades sist var en knapp, som placerades centrerat, knap
 ```
 ![](Screenshot.png)
 
-_Du kan ta bort all text som finns sedan tidigare_.
-
-## Följande grundsyn gäller dugga-svar:
-
-- Ett kortfattat svar är att föredra. Svar som är längre än en sida text (skärmdumpar och programkod exkluderat) är onödigt långt.
-- Svaret skall ha minst en snutt programkod.
-- Svaret skall inkludera en kort övergripande förklarande text som redogör för vad respektive snutt programkod gör eller som svarar på annan teorifråga.
-- Svaret skall ha minst en skärmdump. Skärmdumpar skall illustrera exekvering av relevant programkod. Eventuell text i skärmdumpar måste vara läsbar.
-- I de fall detta efterfrågas, dela upp delar av ditt svar i för- och nackdelar. Dina för- respektive nackdelar skall vara i form av punktlistor med kortare stycken (3-4 meningar).
-
-Programkod ska se ut som exemplet nedan. Koden måste vara korrekt indenterad då den blir lättare att läsa vilket gör det lättare att hitta syntaktiska fel.
-
-```
-function errorCallback(error) {
-    switch(error.code) {
-        case error.PERMISSION_DENIED:
-            // Geolocation API stöds inte, gör något
-            break;
-        case error.POSITION_UNAVAILABLE:
-            // Misslyckat positionsanrop, gör något
-            break;
-        case error.UNKNOWN_ERROR:
-            // Okänt fel, gör något
-            break;
-    }
-}
-```
-
-
-Bilder läggs i samma mapp som markdown-filen.
-
-![](android.png)
-
-Läs gärna:
-
-- Boulos, M.N.K., Warren, J., Gong, J. & Yue, P. (2010) Web GIS in practice VIII: HTML5 and the canvas element for interactive online mapping. International journal of health geographics 9, 14. Shin, Y. &
-- Wunsche, B.C. (2013) A smartphone-based golf simulation exercise game for supporting arthritis patients. 2013 28th International Conference of Image and Vision Computing New Zealand (IVCNZ), IEEE, pp. 459–464.
-- Wohlin, C., Runeson, P., Höst, M., Ohlsson, M.C., Regnell, B., Wesslén, A. (2012) Experimentation in Software Engineering, Berlin, Heidelberg: Springer Berlin Heidelberg.
