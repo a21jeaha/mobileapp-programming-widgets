@@ -3,21 +3,21 @@
 
 **Widget Labb**
 
-En constraint layout som har en vit färg, den kommer agera som grund för resten av applikationen. Därför sätts des constraints längst med kanterna av applikationen. 
+En __constraintLayout__ meden vit bakgrundsfärg skapas, den kommer att agera som grund för resten av applikationen, därför sätts dess __constraints__ längs med kanterna av applikationen.
 ```
 <androidx.constraintlayout.widget.ConstraintLayout>
 //skapar en constraintlayout
 
 ```
 
-Nya färg resources i colors.xml skapades, och kommer användas sedan.
+Nya färg resources i `colors.xml` skapades, de kommer användas vid ett senare tillfälle.
 
 ```
 <color name="veryLightBlue">#5F74FC</color>
 <color name="white">#FFFFFF</color>
 //varje rad är en ny lagrad färg med ett namn 
 ```
-I constraint layouten som skapades innan skapas en LinearLayout med den blå färgen, denna kommer senare att innehålla resterande widgets. En generel margin angavs för att förminska storleken av den blå widgeten.
+I det __constraintLayouten__ som skapades innan, skapas nu en __LinearLayout__ med den blå färg som sparats i `colors.xml`, denna kommer senare att innehålla resterande widgets. En generell __margin__ angavs för att förminska storleken av den blå widgeten.
 ```
  <LinearLayout
             android:id="@+id/widget_window_Background"    // ger layouten ett ID
@@ -35,8 +35,8 @@ I constraint layouten som skapades innan skapas en LinearLayout med den blå fä
   </LinearLayout>
  
 ```
-Det skapdes sedan en TextView som placerades innanför LinearLayouten, I denna ruta skrev en liten kort textsträng som centrerades med hjälp av `android:gravity="center"` texten justerades sedan med hjälp av `android:textSize="" android:textStyle=""`.
-Brädden för fönstret sattses efter dess förälder men med en generel magrin på 10dp för att ge den blå bakgrunden chansen att träda fram och sist ändrades bakgrundsfärgen till vit. 
+Det skapades sedan en TextView som placerades innanför föregående LinearLayout, I denna ruta skrevs en liten kort textsträng som centrerades med hjälp av `android:gravity="center"` texten justerades sedan med hjälp av `android:textSize="" android:textStyle=""`.
+Bredden för fönstret sattes efter dess förälder men med en generell __magrin__ på 10dp för att ge den blå bakgrunden chansen att träda fram och sist ändrades bakgrundsfärgen till vit. 
 ```
 <TextView                                       // skapar en textView
          android:id="@+id/text_window"
@@ -50,7 +50,7 @@ Brädden för fönstret sattses efter dess förälder men med en generel magrin 
          android:gravity="center"                   // texten centreras
          />
 ```
-Ytterligare en LinearLayout skappades denna gång med en horisontel orientering, i den inforgades det en ImageView där en bild som placerats i mappen **drawable** användes samt en textView med en kort text sträng som plaserades bredvid med en centrering. 
+Ytterligare en LinearLayout skapades denna gång med en horisontell orientering, i den infogades en ImageView där en bild (som placerats i mappen **drawable**) användes, samt en textView med en kort text sträng som placerades bredvid med en centrering.
 ```
    <LinearLayout
                 android:layout_marginTop="50dp"         // layouten flyttas ned 50dp från den widget som ligger över den 
@@ -76,7 +76,7 @@ Ytterligare en LinearLayout skappades denna gång med en horisontel orientering,
 
                 </LinearLayout>
 ```
-Den widget som implementerades sist var en knapp, som placerades centrerat, knappen infogades som sista element i det första LinearLayouten som skapades. 
+Den sista implementeringen av widge kom i formen av en knapp, som placerades centrerat, och infogades som sista element i det första LinearLayouten som skapades (den vertikala). 
 ```
                 <Button                         // skapar en knapp widget
                     android:id="@+id/button"
