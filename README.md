@@ -38,7 +38,7 @@ I constraint layouten som skapades innan skapas en LinearLayout med den blå fä
 Det skapdes sedan en TextView som placerades innanför LinearLayouten, I denna ruta skrev en liten kort textsträng som centrerades med hjälp av `android:gravity="center"` texten justerades sedan med hjälp av `android:textSize="" android:textStyle=""`.
 Brädden för fönstret sattses efter dess förälder men med en generel magrin på 10dp för att ge den blå bakgrunden chansen att träda fram och sist ändrades bakgrundsfärgen till vit. 
 ```
-<TextView
+<TextView                                       // skapar en textView
          android:id="@+id/text_window"
          android:layout_width="match_parent"
          android:layout_height="200dp"              // en fast storlek sätts
@@ -58,7 +58,7 @@ Ytterligare en LinearLayout skappades denna gång med en horisontel orientering,
                 android:layout_width="wrap_content"     //
                 android:layout_height="wrap_content">   // layouten använder enbart den plats den behöver och anpassar storleken till det.
 
-                <ImageView
+                <ImageView                              // skapar en imageView
                     android:id="@+id/image"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
@@ -78,7 +78,7 @@ Ytterligare en LinearLayout skappades denna gång med en horisontel orientering,
 ```
 Den widget som implementerades sist var en knapp, som placerades centrerat, knappen infogades som sista element i det första LinearLayouten som skapades. 
 ```
-                <Button
+                <Button                         // skapar en knapp widget
                     android:id="@+id/button"
                     android:text="@string/Button"
                     android:layout_width="wrap_content"
